@@ -1,0 +1,2 @@
+# Jeoung-Gyu-Lee-NSCLC-polyherbal-network-pharmacology
+This repository provides the computational pipeline used to evaluate the therapeutic potential of an optimized polyherbal mixture against non-small cell lung cancer (NSCLC). The workflow includes network pharmacology, differential gene expression analysis, molecular docking, molecular dynamics simulations, and survival analysis using TCGA-LUAD.
