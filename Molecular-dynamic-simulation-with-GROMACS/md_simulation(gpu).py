@@ -31,7 +31,6 @@ drive.mount('/content/drive')
 # 
 # # Configure with CMake, SIMD is AVX2_256
 # cmake .. \
-#   -DGMX_SIMD=AVX2_256 \
 #   -DGMX_CPU_DISPATCH=ON \
 #   -DGMX_GPU=CUDA \
 #   -DGMX_BUILD_OWN_FFTW=ON \
@@ -112,7 +111,7 @@ from google.colab import files
 uploaded = files.upload()
 os.rename(list(uploaded.keys())[0], "receptor.pdb")
 
-# Remove 'HETATM' for dokcing
+# Remove 'LIGAND=UNL' for dokcing
 !grep -v "UNL"  receptor.pdb > receptor_clean.pdb
 
 # Commented out IPython magic to ensure Python compatibility.
