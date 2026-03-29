@@ -166,7 +166,7 @@ os.rename(list(uploaded.keys())[0], "complex.pdb")
 
 # Add Hydrogens and Adjust pH using Open Babel (Split Steps),
 # This adds BOTH polar (with ph 7.4) and non-polar hydrogens.
-!obabel ligand.pdb -O ligand_clean.pdb -h -p 7.4
+!obabel ligand.pdb -O ligand_clean.pdb -p 7.4
 
 # Add AmberTools 'bin' and 'lib' directories to PATH and LD_LIBRARY_PATH so executables and shared libraries can be found
 os.environ["PATH"] = "/usr/local/envs/amber/bin:" + os.environ.get("PATH","")
@@ -668,7 +668,7 @@ drive.flush_and_unmount()
 # #@title **RMSD analysis**
 # %%bash
 # source /usr/local/gromacs/bin/GMXRC
-# printf "Backbone\nBackbone\n" | gmx rms -s md.tpr -f md_fit.xtc -o rmsd.xvg -tu ps
+# printf "Backbone\nUNLe\n" | gmx rms -s md.tpr -f md_fit.xtc -o rmsd.xvg -tu ps
 
 # Commented out IPython magic to ensure Python compatibility.
 # #@title **RMSF analysis**
